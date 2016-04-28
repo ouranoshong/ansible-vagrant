@@ -1,0 +1,12 @@
+
+---
+  - hosts: all
+    vars_files:
+        - vars/common.yml
+        - vars/php.yml
+        - vars/apache.yml
+    roles:
+        - qianka.ubuntu-common
+        - nexeck.packages
+        - geerlingguy.apache
+        - geerlingguy.php

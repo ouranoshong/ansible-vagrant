@@ -23,4 +23,4 @@ php_packages:
     - php5-tidy
     - php5-imagick
     - libapache2-mod-php5
-    - apache2-mpm-event
+    - apache2-mpm-prefork

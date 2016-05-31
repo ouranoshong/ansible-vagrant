@@ -2,7 +2,7 @@ php_enable_webserver: true
 php_webserver_daemon: "apache2"
 php_executable: "php"
 
-php_memory_limit: "256M"
+php_memory_limit: "512M"
 php_max_execution_time: "90"
 php_date_timezone: "Asia/Shanghai"
 php_short_open_tag: "On"

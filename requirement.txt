@@ -1,3 +1,5 @@
 
+qianka.ubuntu-common
+nexeck.packages
 geerlingguy.apache
-geerlingguy.php
+geerlingguy.php,2.0.3

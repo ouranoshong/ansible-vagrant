@@ -20,6 +20,7 @@ php_packages:
     - php-apc
     - libpcre3-dev
     - php5-mongo
+    - php5-mysqlnd
     - php5-tidy
     - php5-imagick
     - libapache2-mod-php5

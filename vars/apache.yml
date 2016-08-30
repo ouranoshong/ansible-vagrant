@@ -3,4 +3,4 @@ apache_vhosts:
   - servername: "local.dev"
     documentroot: "/var/www/html"
   - servername: "symfony.dev"
-    documentroot: "/var/www/html/symfony/web"
+    documentroot: "/var/www/symfony/web"

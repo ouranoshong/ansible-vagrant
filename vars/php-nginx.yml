@@ -1,0 +1,24 @@
+php_enable_php_fpm: true
+php_webserver_daemon: "nginx"
+
+php_fpm_listen: "127.0.0.1:9000"
+php_fpm_listen_allowed_clients: "127.0.0.1"
+php_fpm_pm_max_children: 50
+php_fpm_pm_start_servers: 5
+php_fpm_pm_min_spare_servers: 5
+php_fpm_pm_max_spare_servers: 5
+
+php_packages:
+    - php5
+    - php5-mcrypt
+    - php5-cli
+    - php5-fpm
+    - php5-common
+    - php5-curl
+    - php5-dev
+    - php5-gd
+    - php5-mysqlnd
+    - php-pear
+    - libpcre3-dev
+    - php5-tidy
+    - php5-imagick

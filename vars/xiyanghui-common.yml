@@ -1,0 +1,6 @@
+ubuntu_apt_mirror: http://mirrors.tencentyun.com # For remote server
+packages:
+    - name: language-pack-zh-hans
+      state: latest
+    - name: htop
+      state: latest

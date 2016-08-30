@@ -1,0 +1,27 @@
+nginx_vhosts:
+  - listen: "80"
+    server_name: "symfony.dev"
+    root: "/var/www/symfony/web"
+    index: "index.php index.html index.htm"
+    access_log: "/var/log/nginx/symfony-error.log"
+    error_log: "/var/log/nginx/symfony-access.log"
+    extra_parameters: |
+        rewrite ^/app\.php/?(.*)$ /$1 permanent;
+
+        location / {
+        index app.php;
+            try_files $uri @rewriteapp;
+        }
+
+        location @rewriteapp {
+            rewrite ^(.*)$ /app.php/$1 last;
+        }
+
+        # 此段为将PHP请求转交给FastCGI服务，PHP-FPM是非常流行的选项。
+        location ~ ^/(app|app_dev)\.php(/|$) {
+            fastcgi_pass   127.0.0.1:9000;
+            fastcgi_split_path_info ^(.+\.php)(/.*)$;
+            include fastcgi_params;
+            fastcgi_param  SCRIPT_FILENAME    $document_root$fastcgi_script_name;
+            fastcgi_param  HTTPS              off;
+        }

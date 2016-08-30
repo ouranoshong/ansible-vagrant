@@ -2,3 +2,5 @@ apache_vhosts:
   # Additional optional properties: 'serveradmin, serveralias, extra_parameters'.
   - servername: "local.dev"
     documentroot: "/var/www/html"
+  - servername: "symfony.dev"
+    documentroot: "/var/www/html/symfony/web"

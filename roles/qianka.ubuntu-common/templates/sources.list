@@ -1,0 +1,13 @@
+# binary packages
+deb {{ ubuntu_apt_mirror }} {{ ubuntu_release_code }} main multiverse restricted universe
+deb {{ ubuntu_apt_mirror }} {{ ubuntu_release_code }}-updates main multiverse restricted universe
+deb {{ ubuntu_apt_mirror }} {{ ubuntu_release_code }}-proposed main multiverse restricted universe
+deb {{ ubuntu_apt_mirror }} {{ ubuntu_release_code }}-backports main multiverse restricted universe
+deb {{ ubuntu_apt_mirror }} {{ ubuntu_release_code }}-security main multiverse restricted universe
+
+# source packages
+deb-src {{ ubuntu_apt_mirror }} {{ ubuntu_release_code }} main multiverse restricted universe
+deb-src {{ ubuntu_apt_mirror }} {{ ubuntu_release_code }}-updates main multiverse restricted universe
+deb-src {{ ubuntu_apt_mirror }} {{ ubuntu_release_code }}-proposed main multiverse restricted universe
+deb-src {{ ubuntu_apt_mirror }} {{ ubuntu_release_code }}-backports main multiverse restricted universe
+deb-src {{ ubuntu_apt_mirror }} {{ ubuntu_release_code }}-security main multiverse restricted universe

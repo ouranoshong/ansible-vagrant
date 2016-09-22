@@ -11,4 +11,4 @@
         - nexeck.packages
         - geerlingguy.apache
         - geerlingguy.php
-        - geerlingguy.mysql
+        # - geerlingguy.mysql

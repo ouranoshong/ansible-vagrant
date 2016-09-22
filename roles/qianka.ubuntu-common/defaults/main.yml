@@ -1,0 +1,6 @@
+---
+ubuntu_apt_mirror: http://archive.ubuntu.com/ubuntu/
+ubuntu_release_code: trusty # 14.04
+
+timezone: Asia/Shanghai
+locale: en_US.UTF-8

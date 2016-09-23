@@ -1,0 +1,41 @@
+---
+# hostname
+
+- name: set hostname
+  hostname: name={{ inventory_hostname_short }}
+
+
+# locale
+
+- name: set locale
+  locale_gen: name={{ locale }}
+              state=present
+  notify: reconfigure locale
+
+- name: set locale file
+  template: src=locale
+            dest=/etc/default/locale
+
+
+# timezone
+
+- name: set localtime
+  file: src=/usr/share/zoneinfo/{{ timezone }}
+        dest=/etc/localtime
+        state=link
+        force=true
+
+- name: set timezone
+  template: src=timezone
+            dest=/etc/timezone
+  notify: reconfigure tzdata
+
+
+# apt mirror
+
+- name: update apt sources.list
+  template: src=sources.list
+            dest=/etc/apt/sources.list
+            owner=root
+            group=root
+            mode=0644

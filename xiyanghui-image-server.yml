@@ -1,0 +1,14 @@
+
+---
+  - hosts: all
+    vars_files:
+        - vars/xiyanghui-common.yml
+        - vars/xiyanghui-php.yml
+        - vars/xiyanghui-apache.yml
+    roles:
+        # - qianka.ubuntu-common
+        - nexeck.packages
+        - geerlingguy.apache
+        - geerlingguy.php
+    # tasks:
+    #   - shell: ls /var

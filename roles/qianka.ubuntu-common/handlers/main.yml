@@ -1,0 +1,9 @@
+---
+- name: reconfigure tzdata
+  command: dpkg-reconfigure --frontend noninteractive tzdata
+
+- name: restart resolvconf
+  service: name=resolvconf state=restarted
+
+- name: reconfigure locale
+  command: dpkg-reconfigure locales

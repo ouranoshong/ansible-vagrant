@@ -19,11 +19,8 @@
         - geerlingguy.apache
         - geerlingguy.php
         # - geerlingguy.mysql
-<<<<<<< HEAD
 
     post_tasks:
         - name: Add http2 protocol to apache configure file
           shell: "echo 'Protocols h2 http/1.1' >> /etc/apache2/apache2.conf"
           notify: restart webserver
-=======
->>>>>>> 832b11a303b504c72ab164910400dbd99c90b029

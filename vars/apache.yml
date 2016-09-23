@@ -4,3 +4,16 @@ apache_vhosts:
     documentroot: "/var/www/html"
   - servername: "symfony.dev"
     documentroot: "/var/www/symfony/web"
+
+apache_vhosts_ssl:
+  - {
+        servername: "imagestuffs.dev",
+        documentroot: "/var/www/html/image-stuffs",
+        certificate_file: "/etc/ssl/certs/imagestuffs.dev.crt",
+        certificate_key_file: "/etc/ssl/private/imagestuffs.dev.key",
+    }
+
+apache_mods_enabled:
+  - rewrite.load
+  - ssl.load
+  - http2.load

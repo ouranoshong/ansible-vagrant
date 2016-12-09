@@ -1,0 +1,10 @@
+php_enable_webserver: true
+
+php_executable: "php"
+php_memory_limit: "512M"
+php_max_execution_time: "45"
+php_date_timezone: "Asia/Shanghai"
+php_error_reporting: "E_ALL"
+php_display_errors: "Off"
+php_ignore_repeated_errors: "On"
+php_ignore_repeated_source: "On"

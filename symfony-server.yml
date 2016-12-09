@@ -1,15 +1,13 @@
-
 ---
   - hosts: all
     vars_files:
         - vars/common.yml
-        - vars/php-apache.yml
-        - vars/php.yml
-        - vars/apache.yml
+        - vars/symfony-php-apache.yml
+        - vars/symfony-php.yml
+        - vars/symfony-apache.yml
+        - vars/symfony-mysql.yml
     roles:
         - qianka.ubuntu-common
-        # - tschifftner.common
-        # - SimpliField.packages
         - TalLannder.common-packages
         - geerlingguy.apache
         - geerlingguy.php

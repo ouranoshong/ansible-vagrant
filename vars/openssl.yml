@@ -1,0 +1,2 @@
+openssl_self_signed:
+      - { name: 'imagestuffs.dev', domains: ['*.imagestuffs.dev', 'imagestuffs.dev'], country: 'DE', state: 'Bavaria', city: 'Munich', organization: 'Foo Bar', unit: '', email: 'hong@example.com', days: 3650 }

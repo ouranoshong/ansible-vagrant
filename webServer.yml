@@ -6,11 +6,26 @@
         - vars/php-apache.yml
         - vars/php.yml
         - vars/apache.yml
+        - vars/openssl.yml
+
+    pre_tasks:
+        - name: Install apache ppa which own by ondrej
+          apt_repository: repo='ppa:ondrej/apache2'
+
     roles:
         - qianka.ubuntu-common
         # - tschifftner.common
         # - SimpliField.packages
         - TalLannder.common-packages
+
+        - nexeck.packages
+        - franklinkim.openssl
+
         - geerlingguy.apache
         - geerlingguy.php
         # - geerlingguy.mysql
+
+    post_tasks:
+        - name: Add http2 protocol to apache configure file
+          shell: "echo 'Protocols h2 http/1.1' >> /etc/apache2/apache2.conf"
+          notify: restart webserver

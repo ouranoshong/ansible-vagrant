@@ -1,2 +1,0 @@
-
-image-server ansible_host=182.254.234.201 ansible_user=kingmax ansible_ssh_pass=709394 ansible_become=true ansible_sudo_pass=709394

@@ -1,6 +1,19 @@
-ubuntu_apt_mirror: http://mirrors.tencentyun.com # For remote server
+ubuntu_apt_mirror: http://mirrors.tencentyun.com/ubuntu # For remote server
+# packages:
+#     - name: language-pack-zh-hans
+#       state: latest
+#     - name: htop
+#       state: latest
+
+
+# ubuntu_apt_mirror: http://cn.archive.ubuntu.com/ubuntu
+
 packages:
-    - name: language-pack-zh-hans
-      state: latest
-    - name: htop
-      state: latest
+  - name: language-pack-zh-hans
+    update_cache: yes
+  - name: htop
+    # state: absent
+  - name: git
+    # state: absent
+  - name: sysstat
+  - name: apachetop

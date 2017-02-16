@@ -1,0 +1,22 @@
+apache_vhosts:
+  # Additional optional properties: 'serveradmin, serveralias, extra_parameters'.
+  # - servername: "www.xywl.hk"
+  #   documentroot: "/var/www/xywl"
+  - servername: "www.xywl.hk"
+    documentroot: "/var/www/xywl"
+    extra_parameters: |
+      <Directory "/var/www/xywl">
+        Options FollowSymLinks
+        AllowOverride All
+        Order allow,deny
+        allow from all
+      </Directory>
+  # - servername: "xyh.dev"
+  #   documentroot: "/var/www/xyh"
+  #   extra_parameters: |
+  #     <Directory "/var/www/xyh">
+  #       Options FollowSymLinks
+  #       AllowOverride All
+  #       Order allow,deny
+  #       allow from all
+  #     </Directory>

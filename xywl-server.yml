@@ -1,0 +1,13 @@
+
+---
+  - hosts: all
+    vars_files:
+        - vars/xiyanghui-common.yml
+        - vars/xiyanghui-php.yml
+        - vars/xywl-apache.yml
+    
+    roles:
+        - qianka.ubuntu-common
+        - TalLannder.common-packages
+        - geerlingguy.apache
+        - geerlingguy.php
